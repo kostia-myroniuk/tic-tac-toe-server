@@ -16,5 +16,7 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core REQUIRED)
 
 add_executable(tic-tac-toe-server
   main.cpp
+  cell.h cell.cpp
+  board.h board.cpp
 )
 target_link_libraries(tic-tac-toe-server Qt${QT_VERSION_MAJOR}::Core)
