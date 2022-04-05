@@ -1,13 +1,12 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include "cell.h"
 #include <vector>
 #include <algorithm>
 #include <map>
 
-const int MIN_BOARD_SIZE = 3;
-const int MAX_BOARD_SIZE = 10;
+#include "cell.h"
+#include "board_size.h"
 
 enum class BoardState {
     UNFINISHED,
@@ -23,6 +22,7 @@ public:
     int GetSize();
     int GetWinSequenceSize();
     Cell* GetCell(int row, int column);
+    bool SetCellMark(int row, int column, CellMark mark);
     BoardState GetBoardState();
 
 private:

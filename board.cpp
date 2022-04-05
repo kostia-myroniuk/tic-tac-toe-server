@@ -34,6 +34,17 @@ Cell* Board::GetCell(int row, int column)
     }
 }
 
+bool Board::SetCellMark(int row, int column, CellMark mark)
+{
+    Cell* cell = GetCell(row, column);
+    if (cell != nullptr) {
+        return cell->SetMark(mark);
+    }
+    else {
+        return false;
+    }
+}
+
 BoardState Board::GetBoardState()
 {
     for (int row = 0; row < size; row++) {

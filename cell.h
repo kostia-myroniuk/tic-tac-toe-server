@@ -14,7 +14,7 @@ public:
     int GetRow();
     int GetColumn();
     CellMark GetMark();
-    void SetMark(CellMark _mark);
+    bool SetMark(CellMark _mark);
 
 private:
     int row;

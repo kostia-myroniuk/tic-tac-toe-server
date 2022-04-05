@@ -22,9 +22,13 @@ CellMark Cell::GetMark()
     return mark;
 }
 
-void Cell::SetMark(CellMark _mark)
+bool Cell::SetMark(CellMark _mark)
 {
     if (mark == CellMark::UNMARKED) {
         mark = _mark;
+        return true;
+    }
+    else {
+        return false;
     }
 }
